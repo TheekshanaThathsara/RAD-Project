@@ -71,7 +71,7 @@ useEffect(()=>{
   
 
     <div className="profile-container">
-      <h1 className="page-title">User Profile</h1>
+      <h1 className="page-title">User Pasindu Profile</h1>
       <div className="profile-header">
        
         <div className="profile-info">
