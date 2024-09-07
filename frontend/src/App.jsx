@@ -9,6 +9,7 @@ import LoginPopup from './components/LoginPopup/LoginPopup'
 import Verify from './pages/Verify/Verify'
 import MyOrders from './pages/MyOrders/MyOrders'
 import UserProfile from './pages/UserProfile/UserProfile'
+import Update from './pages/UserProfile/Update'
  
  const App = () => {
 
@@ -29,6 +30,8 @@ import UserProfile from './pages/UserProfile/UserProfile'
          <Route path='/myorders' element={<MyOrders/>} />
          <Route path='/userprofile' element={<UserProfile/>} />
          <Route path='login' element={<LoginPopup/>} />
+         <Route path='update' element={<Update/>} />
+
 
 
       </Routes> 
