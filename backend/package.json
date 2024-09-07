@@ -4,13 +4,7 @@
   "main": "server.js",
   "type": "module",
   "scripts": {
-    "server": "nodemon server.js",
-    "name": "your-project-name",
-    "version": "1.0.0",
-    "main": "app.js",
-    "start": "node app.js",
-    "dev": "nodemon app.js"
-    
+    "dev": "nodemon"
   },
   "author": "",
   "license": "ISC",
@@ -28,7 +22,6 @@
     "validator": "^13.12.0"
   },
   "devDependencies": {
-    "nodemon": "^3.1.4",
-    "vite": "^5.4.3"
+    "nodemon": "^3.1.4"
   }
 }
