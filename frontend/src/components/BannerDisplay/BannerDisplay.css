@@ -1,0 +1,40 @@
+.banner-display {
+    padding: 20px;
+    text-align: center;
+}
+
+.banner-display h2 {
+    margin-bottom: 20px;
+}
+
+.banner-display-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.banner-item {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    width: 300px;
+}
+
+.banner-image {
+    width: 100%;
+    height: auto;
+}
+
+.banner-info {
+    padding: 10px;
+}
+
+.banner-link {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.banner-link:hover {
+    text-decoration: underline;
+}

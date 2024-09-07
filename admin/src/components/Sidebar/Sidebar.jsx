@@ -1,7 +1,7 @@
 import React from 'react'
-import './Sidebar.css'
-import { assets } from '../../assets/assets'
 import { NavLink } from 'react-router-dom'
+import { assets } from '../../assets/assets'
+import './Sidebar.css'
 
 const Sidebar = () => {
   return (
@@ -18,6 +18,10 @@ const Sidebar = () => {
         <NavLink to='/orders' className="sidebar-option">
             <img src={assets.order_icon} alt=''/>
             <p>Orders</p>
+        </NavLink>
+        <NavLink to='/banner' className="sidebar-option">
+            <img src={assets.add_icon} alt=''/>
+            <p>Banner</p>
         </NavLink>
       </div>
       

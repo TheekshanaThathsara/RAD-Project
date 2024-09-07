@@ -1,12 +1,13 @@
  import React from 'react'
+import { Route, Routes } from 'react-router-dom'
+import { ToastContainer } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
 import Navbar from './components/Navbar/Navbar'
 import Sidebar from './components/Sidebar/Sidebar'
-import { Routes,Route, Link } from 'react-router-dom'
-import Orders from './pages/Orders/Orders'
 import Add from './pages/Add/Add'
+import Banner from './pages/Banner/Banner'
 import List from './pages/List/List'
-import {ToastContainer} from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import Orders from './pages/Orders/Orders'
  
  const App = () => {
 
@@ -27,6 +28,7 @@ import 'react-toastify/dist/ReactToastify.css';
           <Route path='/add' element={<Add url={url} />}/>
           <Route path='/list' element={<List url={url}/>}/>
           <Route path='/orders' element={<Orders url={url}/>}/>
+          <Route path='/banner' element={<Banner url={url}/>}/>
         </Routes>
       </div>
        
