@@ -1,9 +1,10 @@
-import React, {useState} from 'react'
-import './Home.css'
-import Header from '../../components/Header/Header'
+import React, { useState } from 'react'
+import AppDownload from '../../components/AppDownload/AppDownload'
+import BannerItem from '../../components/BannerDisplay/BannerDisplay'
 import ExploreMenu from '../../components/ExploreMenu/ExploreMenu'
 import FoodDisplay from '../../components/FoodDisplay/FoodDisplay'
-import AppDownload from '../../components/AppDownload/AppDownload'
+import Header from '../../components/Header/Header'
+import './Home.css'
  
  const Home = () => {
 
@@ -14,6 +15,7 @@ import AppDownload from '../../components/AppDownload/AppDownload'
         <Header/>
         <ExploreMenu category={category} setCategory={setCategory}/>
         <FoodDisplay category={category}/>
+        <BannerItem category={category}/>
         <AppDownload/>
      </div>
    )

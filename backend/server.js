@@ -46,14 +46,15 @@ app.listen(PORT,()=>{
 
  */
 
-import express from "express";
 import cors from "cors";
-import { connectDB } from "./config/db.js";
-import foodRouter from "./routes/foodRoute.js";
-import userRouter from "./routes/UserRoute.js";
 import 'dotenv/config';
+import express from "express";
+import { connectDB } from "./config/db.js";
+import bannerRouter from "./routes/bannerRoute.js";
 import cartRouter from "./routes/cartRoute.js";
+import foodRouter from "./routes/foodRoute.js";
 import orderRouter from "./routes/orderRoute.js";
+import userRouter from "./routes/UserRoute.js";
 
 // app config
 const app = express();
@@ -71,6 +72,7 @@ app.use("/images", express.static('uploads'));
 app.use("/api/user", userRouter);
 app.use("/api/cart", cartRouter);
 app.use("/api/order", orderRouter);
+app.use("/api/banner",bannerRouter)
 
 app.get("/", (req, res) => {
     res.send("API Working");
