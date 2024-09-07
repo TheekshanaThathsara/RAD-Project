@@ -5,9 +5,11 @@ const Header = () => {
   return (
     <div className='header'>
         <div className='header-contents'>
-            <h2>Order your favourite food here</h2>
-            <p>Choose from a diverse menu featuring a delectable array of dishes crafted with the finest ingredients and culinary expertise.Our mission to satisfy your cravings and elevate your dining experiecnce, one delicious meal at a time</p>
-            <button>Veiw Menu</button>
+            <h2>Reading <br/>Completes <br/>Man</h2>
+            <p>Explore a world of literary treasures, where each book is carefully curated to inspire, captivate, and transport you to new realms.
+              Our mission is to ignite your passion for reading and enrich your mind with stories that linger long after the final page. 
+              Whether you seek timeless classics or contemporary gems, we are here to elevate your reading experience, one captivating book at a time.</p>
+            
         </div>
       
     </div>
