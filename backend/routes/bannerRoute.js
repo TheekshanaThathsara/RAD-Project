@@ -18,6 +18,6 @@ const upload = multer({ storage: storage });
 bannerRouter.post("/add", upload.single("image"), addBanner);
 bannerRouter.get("/list", listBanners);
 bannerRouter.delete("/remove/:id", removeBanner);
-bannerRouter.post("/update/:id", updateBanner);
+bannerRouter.post("/update/:id",upload.single("image"),  updateBanner);
 
 export default bannerRouter;
