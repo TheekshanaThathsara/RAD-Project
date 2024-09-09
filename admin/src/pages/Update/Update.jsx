@@ -10,6 +10,7 @@ const Update = ({ url }) => {
 
   const navigate = useNavigate()
   const [loading,setLoading] = useState(false)
+  const [updating,setUpdating] = useState(false)
   const [currentImage, setCurrentImage] = useState("");
   const [image, setImage] = useState(false);
   const [data, setData] = useState({
@@ -41,6 +42,7 @@ const Update = ({ url }) => {
     setData((data) => ({ ...data, [name]: value }));
   };
   const onSubmitHandler = async (event) => {
+    setUpdating(true)
     event.preventDefault();
     const formData = new FormData();
     formData.append("name", data.name);
@@ -57,6 +59,8 @@ const Update = ({ url }) => {
     } else {
       toast.error(response.data.message);
     }
+    setUpdating(false)
+
   };
 
   if(loading){
@@ -89,7 +93,6 @@ const Update = ({ url }) => {
             onChange={onChangeHandler}
             value={data.name}
             type="text"
-            name="name"
             placeholder="Type here"
           />
         </div>
@@ -98,7 +101,6 @@ const Update = ({ url }) => {
           <textarea
             onChange={onChangeHandler}
             value={data.description}
-            name="description"
             rows="6"
             placeholder="Write content here"
           />
@@ -106,7 +108,7 @@ const Update = ({ url }) => {
         <div className="add-category-price">
           <div className="add-category flex-col">
             <p>Product category</p>
-            <select onChange={onChangeHandler} name="category">
+            <select onChange={onChangeHandler} >
               <option value="Salad">Fiction</option>
               <option value="Rolls">Non Fiction</option>
               <option value="Desert">Fantasy</option>
@@ -121,13 +123,12 @@ const Update = ({ url }) => {
               onChange={onChangeHandler}
               value={data.price}
               type="Number"
-              name="price"
               placeholder="$20"
             />
           </div>
         </div>
-        <button type="submit" className="add-btn">
-          Update
+        <button disabled={updating} type="submit" className="add-btn">
+          {updating ? "Updating..." : "Update"}
         </button>
       </form>
     </div>
