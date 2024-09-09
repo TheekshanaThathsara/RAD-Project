@@ -10,6 +10,7 @@ import Verify from './pages/Verify/Verify'
 import MyOrders from './pages/MyOrders/MyOrders'
 import UserProfile from './pages/UserProfile/UserProfile'
 import Update from './pages/UserProfile/Update'
+import Category from './components/ExploreMenu/ExploreMenu'
  
  const App = () => {
 
@@ -25,6 +26,8 @@ import Update from './pages/UserProfile/Update'
       <Routes>
          <Route path='/' element={<Home/>}/>
          <Route path='/cart' element={<Cart/>}/>
+         <Route path='/categories' element={<Category/>}/>
+         <Route path='/reviews' element={<Reviews/>}/>
          <Route path='/order' element={<PlaceOrder/>}/>
          <Route path='/verify' element={<Verify/>}/> 
          <Route path='/myorders' element={<MyOrders/>} />
