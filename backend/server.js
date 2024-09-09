@@ -1,7 +1,7 @@
 /*import express from "express"
 import cors from "cors"
 import { connectDB } from "./config/db.js"
-import foodRouter from "./routes/foodRoute.js"
+import bookRouter from "./routes/bookRoute.js"
 import userRouter from "./routes/UserRoute.js"
 import 'dotenv/config'
 import cartRouter from "./routes/cartRoute.js"
@@ -28,7 +28,7 @@ app.use(cors())
 connectDB();
 
 // api endpoints
-app.use("/api/food",foodRouter)
+app.use("/api/book",bookRouter)
 app.use("/images",express.static('uploads'))
 app.use("/api/user",userRouter)
 app.use("/api/cart",cartRouter)
@@ -52,7 +52,8 @@ import express from "express";
 import { connectDB } from "./config/db.js";
 import bannerRouter from "./routes/bannerRoute.js";
 import cartRouter from "./routes/cartRoute.js";
-import foodRouter from "./routes/foodRoute.js";
+import bookRouter from "./routes/bookRoute.js";
+// import bookRouter from "./routes/bookRoute.js";
 import orderRouter from "./routes/orderRoute.js";
 import userRouter from "./routes/UserRoute.js";
 
@@ -67,12 +68,12 @@ app.use(cors());
 connectDB();
 
 // api endpoints
-app.use("/api/food", foodRouter);
+app.use("/api/book", bookRouter);
 app.use("/images", express.static('uploads'));
 app.use("/api/user", userRouter);
 app.use("/api/cart", cartRouter);
 app.use("/api/order", orderRouter);
-app.use("/api/banner",bannerRouter)
+app.use("/api/banner",bannerRouter);
 
 app.get("/", (req, res) => {
     res.send("API Working");

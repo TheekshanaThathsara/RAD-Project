@@ -8,6 +8,7 @@ import Add from './pages/Add/Add'
 import Banner from './pages/Banner/Banner'
 import List from './pages/List/List'
 import Orders from './pages/Orders/Orders'
+import Update from './pages/Update/Update'
  
  const App = () => {
 
@@ -26,6 +27,7 @@ import Orders from './pages/Orders/Orders'
         <Sidebar/>
         <Routes>
           <Route path='/add' element={<Add url={url} />}/>
+          <Route path='/update/:id' element={<Update url={url} />}/>
           <Route path='/list' element={<List url={url}/>}/>
           <Route path='/orders' element={<Orders url={url}/>}/>
           <Route path='/banner' element={<Banner url={url}/>}/>

@@ -46,7 +46,7 @@ useEffect(()=>{
           <div key={index} className='order-item'>
             <img src={assets.parcel_icon} alt=''/>
             <div>
-              <p className='order-item-food'>
+              <p className='order-item-book'>
                 {order.items.map((item,index)=>{
                   if(index===order.items.length-1){
                     return item.name + " " + item.quantity 
@@ -66,7 +66,7 @@ useEffect(()=>{
             <p>Items : {order.items.length}</p>
             <p>${order.amount}</p>
             <select onChange={(event)=>statusHandler(event,order._id)} value={order.status}>
-              <option value='Food Processing'>Food Processing</option>
+              <option value='Book Processing'>Book Processing</option>
               <option value='Out for delivery'>Out for delivery</option>
               <option value='Delivered'>Delivered</option>
               
